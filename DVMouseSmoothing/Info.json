@@ -6,5 +6,5 @@
 	"AssemblyName": "DVMouseSmoothing.dll",
 	"EntryMethod": "Cybex.MouseSmoothing.Load",
 	"HomePage": "https://www.nexusmods.com/derailvalley/mods/220/",
-	"Repository": ""
+	"Repository": "https://github.com/CybexGS/DVMouseSmoothing/blob/master/DVMouseSmoothing/Repository.json"
 }
