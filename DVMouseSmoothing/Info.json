@@ -1,0 +1,10 @@
+{
+	"Id": "DVMouseSmoothing",
+	"DisplayName": "Mouse Smoothing",
+	"Author": "Cybex",
+	"Version": "1.1.0",
+	"AssemblyName": "DVMouseSmoothing.dll",
+	"EntryMethod": "Cybex.MouseSmoothing.Load",
+	"HomePage": "https://www.nexusmods.com/derailvalley/mods/220/",
+	"Repository": ""
+}

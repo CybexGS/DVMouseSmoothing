@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<RootNamespace>Cybex</RootNamespace>
+		<InformationalVersion>1.1.0</InformationalVersion>
+		<LangVersion>8.0</LangVersion>
+		<Nullable>enable</Nullable>
+		<DVInstallPath>C:\Program Files (x86)\Steam\steamapps\common\Derail Valley\</DVInstallPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="all" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="RedworkDE.Publicizer" Version="0.2.2" />
+		<PublicizeAssembly Include="Assembly-CSharp" Private="True" Readonly="True" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="0Harmony">
+		  <HintPath>bin\Debug\0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+		  <HintPath>bin\Debug\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="DVMouseSmoothing">
+		  <HintPath>bin\Debug\DVMouseSmoothing.dll</HintPath>
+		</Reference>
+		<Reference Include="System" />
+		<Reference Include="System.Core" />
+		<Reference Include="System.Xml.Linq" />
+		<Reference Include="System.Data.DataSetExtensions" />
+		<Reference Include="Microsoft.CSharp" />
+		<Reference Include="System.Data" />
+		<Reference Include="System.Net.Http" />
+		<Reference Include="System.Xml" />
+		<Reference Include="UnityEngine">
+		  <HintPath>bin\Debug\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+		  <HintPath>bin\Debug\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+		  <HintPath>bin\Debug\UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputModule">
+		  <HintPath>bin\Debug\UnityEngine.InputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityModManager">
+		  <HintPath>bin\Debug\UnityModManager.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Properties\" />
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="mkdir &quot;$(DVInstallPath)Mods\$(SolutionName)\&quot;&#xD;&#xA;copy $(TargetPath) &quot;$(DVInstallPath)Mods\$(SolutionName)\&quot;&#xD;&#xA;&#xD;&#xA;copy $(SolutionDir)\$(SolutionName)\Info.json &quot;$(DVInstallPath)Mods\$(SolutionName)\&quot;&#xD;&#xA;&#xD;&#xA;if $(Configuration) == Release (&#xD;&#xA;  mkdir &quot;$(SolutionDir)bld\&quot;&#xD;&#xA;  powershell Compress-Archive -DestinationPath '$(SolutionDir)bld\$(SolutionName)_$(InformationalVersion).zip' -Path '&quot;$(DVInstallPath)Mods\$(SolutionName)\' -Force&#xD;&#xA;)" />
+	</Target>
+
+	<ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+</Project>

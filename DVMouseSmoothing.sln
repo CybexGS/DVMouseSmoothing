@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVMouseSmoothing", "DVMouseSmoothing\DVMouseSmoothing.csproj", "{9DD2FE33-2960-4F65-92CF-473DCCDB139F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DD2FE33-2960-4F65-92CF-473DCCDB139F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DD2FE33-2960-4F65-92CF-473DCCDB139F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DD2FE33-2960-4F65-92CF-473DCCDB139F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DD2FE33-2960-4F65-92CF-473DCCDB139F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6EF562D-AC80-47F4-9545-E213E66CCFAB}
+	EndGlobalSection
+EndGlobal
